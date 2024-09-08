@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0e213d;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .details {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #1c3556;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .details h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #f0a500;
+        }
+
+        .details p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .rules {
+            margin-bottom: 20px;
+        }
+
+        .rules p {
+            margin-bottom: 10px;
+        }
+
+        .details strong {
+            color: #f0a500;
+        }
+
+        .go-back {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f0a500;
+            color: #0e213d;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .go-back:hover {
+            background-color: #d18c00;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .details {
+                margin-left: 20px;
+                margin-top: 0;
+            }
+
+            .details h1 {
+                font-size: 36px;
+            }
+
+            .details p {
+                font-size: 18px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="img/program_details/placeholder.png" alt="Event Image" id="eventImage">
+
+        <div class="details">
+            <h1 id="eventTitle"></h1>
+
+            <div class="rules">
+                
+            </div>
+            <a href="index.html" class="go-back">Go Back</a>
+        </div>
+    </div>
+
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const eventId = urlParams.get('eventId');
+
+        // Log eventId to console
+        console.log("Event ID:", eventId);
+
+        // Simulated event details (in a real app, you'd fetch these from a server)
+        const eventDetails = {
+            '1': {
+                title: "Codelog [Competitive Programming]",
+                rules: [
+                    "Copy-pasting is strictly not allowed.",
+                    "If needed, participants should explain the logic to the event coordinator.",
+                    "If you require any clarification, please direct your inquiries exclusively to the designated volunteers only."
+                ],
+                coordinator: "Vanchinathan P",
+                contact: "+91 6369025081",
+                venue: "Lab A210",
+                image: "img/program_details/2.png"
+            },
+            '2': {
+                title: "Design Up [UI/UX Designing]",
+                rules: [
+                    "1) Participants will have a maximum of 45 minutes.",
+                    "2) Design models will be provided, and participants need to recreate these models.",
+                    "3) Participants are advised to use Figma as a designing tool.",
+                    "4) Participants are not allowed to Google for ideas."
+                ],
+                coordinator: "John Doe",
+                contact: "+91 9876543210",
+                venue: "Room B120",
+                image: "img/program_details/3.png"
+            }
+        };
+
+        // Get event data based on eventId
+        const eventData = eventDetails[eventId];
+
+        // Display the event details if the eventId exists
+        if (eventData) {
+            document.getElementById("eventTitle").textContent = eventData.title;
+            const rulesContainer = document.querySelector(".rules");
+            rulesContainer.innerHTML = "<p><strong>Rules:</strong></p>" + eventData.rules.map(rule => `<p>${rule}</p>`).join('');
+            document.querySelector(".details").innerHTML += `<p><strong>Student Coordinator:</strong> ${eventData.coordinator}</p>`;
+          
+            document.querySelector(".details").innerHTML += `<p><strong>Venue:</strong> ${eventData.venue}</p>`;
+            document.querySelector(".details").innerHTML += `<p><strong>Contact No:</strong> ${eventData.contact}</p>`;
+            document.getElementById("eventImage").src = eventData.image;
+        } else {
+            document.querySelector(".details").innerHTML = "<p>Event not found.</p>";
+        }
+    </script>
+
+</body>
+</html>
