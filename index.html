@@ -7,12 +7,18 @@
     <title>Techquest24</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <!-- Place favicon.ico in the root directory -->
 
+    <link rel="stylesheet" href="./form.css">
     <!-- CSS here -->
+     <link rel="stylesheet" href="./glass.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -26,10 +32,15 @@
     <link rel="stylesheet" href="css/slicknav.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .form-text{
+            font-family: "Montserrat", sans-serif;
+        }   
+    </style>
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
-<body>
+<div>
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -44,44 +55,29 @@
                             <div class="col-xl-3 col-lg-3">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <h1>MZCET</h1>
+                                        <h1 style="color: white; padding-top: 20px;">
+                                            <span style="color: #f66950;">MZ</span>CET
+                                        </h1>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6">
-                                <div class="main-menu  d-none d-lg-block">
+                                <div class="hambarger main-menu d-none d-lg-block">
                                     <nav>
-                                        <ul id="navigation">
-                                            <li><a href="index.html">home</a></li>
-                                            <!-- <li><a href="performer.html">Performer</a></li> -->
-                                            <li><a href="#event">Events</a></li>
-                                           
-<!--                                             
-                                            <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="about.html">about</a></li>
-                                                    <li><a href="Program.html">Program</a></li>
-                                                    <li><a href="Venue.html">Venue</a></li>
-                                                    <li><a href="elements.html">elements</a></li>
-                                                </ul>
-                                            </li> -->
-                                            <!-- <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">blog</a></li>
-                                                    <li><a href="single-blog.html">single-blog</a></li>
-                                                </ul>
-                                            </li> -->
-                                            <li><a href="#contact">Contact</a></li>
-                                            <li><a href="#about-us">About Us</a></li>
-                                            <li><a href="https://www.mzcet.in/default.php">MZ Home</a></li>
+                                        <ul id="navigation" style=" justify-content: center; align-items: center; gap: 20px; ">
+                                            <li><a href="index.html" style="color: white;">home</a></li>
+                                            <li><a href="#event" style="color: white;">Events</a></li>
+                                            <li><a href="#contact" style="color: white;">Contact</a></li>
+                                            <li><a href="#about-us" style="color: white;">About Us</a></li>
+                                            <li><a href="https://www.mzcet.in/default.php" style="color: white;">MZ Home</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                                <div class="buy_tkt">
+                                <div class="buy_tkt" style="display: flex; justify-content: flex-end; align-items: center;">
                                     <div class="book_btn d-none d-lg-block">
-                                        <a href="#">Register</a>
+                                        <a href="#form" style="display: inline-block; padding: 10px 20px; background-color: #f66950; color: white; border-radius: 5px; text-transform: uppercase;">Register</a>
                                     </div>
                                 </div>
                             </div>
@@ -90,11 +86,11 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </header>
+    
     <!-- header-end -->
 
     <!-- slider_area_start -->
@@ -110,9 +106,9 @@
                             <div class="shape_2 wow fadeInDown" data-wow-duration="1s" data-wow-delay=".2s">
                                 <img src="img/shape/shape_2.svg" alt="">
                             </div>
-                            <span class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">15 Aug, 2024</span>
+                            <span class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s" style="color: white ;">15 Aug, 2024</span>
                             <h3 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">Techquest 2024</h3>
-                            <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">Mount Zion College of Engineering and Technology</p>
+                            <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">Department of Computer Science and Engineering</p>
                         </div>
                     </div>
                 </div>
@@ -210,7 +206,7 @@
                 <div class="col-lg-5 col-md-6">
                     <div class="about_info pl-68">
                         <h4 class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">Institution</h4>
-                        <p  class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".6s">The genesis of Mount Zion College of Engineering and Technology, Pudukkottai was in 2001. The Institution is approved by AICTE, and affiliated to Anna University, Chennai. This institution is accredited by National Assessment and Accreditation Council(NAAC) with A+ grade. It offers seven Undergraduate programmes (Civil Engineering, Computer Science & Engineering, Information Technology, Artificial Intelligence and Data Science, Electrical & Electronics Engineering, Electronics & Communication Engineering and Mechanical Engineering) and two Postgraduate programmes (Computer Science& Engineering, Communication Systems)</p>
+                        <p  class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".6s">The genesis of Mount Zion College of Engineering and Technology, Pudukkottai was in 2001. The Institution is approved by AICTE, and affiliated to Anna University, Chennai. This institution is accredited by National Assessment and Accreditation Council(NAAC) with A+ grade.</p>
                         <!-- <a href="#" class="boxed-btn3  wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".7s">Register</a> -->
                     </div>
                 </div>
@@ -230,21 +226,21 @@
                     </div>
                 </div>
             </div>
-            <div class="row align-items-center">
-                <div class="col-lg-7 col-md-6">
+            <div class="col align-items-center">
+                <div class="">
                     <div class="about_thumb">
                         <div class="shap_3  wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
                             <!-- <img src="img/mzcet1.jpg" alt=""> -->
                         </div>
                         <div class="thumb_inner  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                            <img src="img/group_photo.jpg" alt="">
+                            <img src="img/group_photo.jpg" width="" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-6">
-                    <div class="about_info pl-68">
+                <div class="">
+                    <div class="about_info ">
                         <!-- <h4 class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">Institution</h4> -->
-                        <p  class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".6s">Journey of the Department of Computer Science and Engineering at Mount Zion College of Engineering and Technology commenced in 2001, and since then, we have flourished in expertise and prowess within the realms of Computer Science and Engineering Curriculum and Research. Our offerings include B.E. in Computer Science and Engineering with a cohort of 90 students, M.E. in Computer Science and Engineering, admitting 18 students, and part-time opportunities for Doctoral Scholars. Renowned for excellence in both pedagogy and research, our faculty boasts exceptional academic credentials and high esteem. Our department's mission is to equip students with the holistic skill set essential for success in the modern workplace. We firmly believe that knowledge and research are catalysts for positive change. To empower our students, we have spearheaded innovative programs. Our graduates are adept at discerning, analyzing, and resolving intricate cross-disciplinary challenges, coupled with effective communication of their expertise throughout their careers. Our academic offerings encompass Value Added Courses, Certificate Courses, GATE Coaching, Placement Training, 24-hour Workshops, and Idea Hackathons. The paramount objective of our department is to achieve complete student placement. We categorize students' programming skills as beginners, intermediates, or advanced. Subsequently, Value Added Courses encompassing Web design, Mobile Application Development, IoT Training, and other contemporary tools are tailored to enhance their skills. Advanced students receive training in the latest programming languages pertinent to the IT sector trends. Real-time experience is fostered through team-based mini-projects, culminating in a project exhibition to foster knowledge transfer. We take immense pride in sharing that the Department of Computer Science and Engineering (CSE) has achieved a remarkable feat by consecutively securing the first prize in the prestigious national-level Smart India Hackathon since 2019.</p>
+                        <!-- <p  class=" wow fadeInLeft text-justify" data-wow-duration="1s" data-wow-delay=".6s">Journey of the Department of Computer Science and Engineering at Mount Zion College of Engineering and Technology commenced in 2001, and since then, we have flourished in expertise and prowess within the realms of Computer Science and Engineering Curriculum and Research. Our offerings include B.E. in Computer Science and Engineering with a cohort of 90 students, M.E. in Computer Science and Engineering, admitting 18 students, and part-time opportunities for Doctoral Scholars. Renowned for excellence in both pedagogy and research, our faculty boasts exceptional academic credentials and high esteem. Our department's mission is to equip students with the holistic skill set essential for success in the modern workplace. We firmly believe that knowledge and research are catalysts for positive change. To empower our students, we have spearheaded innovative programs. Our graduates are adept at discerning, analyzing, and resolving intricate cross-disciplinary challenges, coupled with effective communication of their expertise throughout their careers. Our academic offerings encompass Value Added Courses, Certificate Courses, GATE Coaching, Placement Training, 24-hour Workshops, and Idea Hackathons. The paramount objective of our department is to achieve complete student placement. We categorize students' programming skills as beginners, intermediates, or advanced. Subsequently, Value Added Courses encompassing Web design, Mobile Application Development, IoT Training, and other contemporary tools are tailored to enhance their skills. Advanced students receive training in the latest programming languages pertinent to the IT sector trends. Real-time experience is fostered through team-based mini-projects, culminating in a project exhibition to foster knowledge transfer. We take immense pride in sharing that the Department of Computer Science and Engineering (CSE) has achieved a remarkable feat by consecutively securing the first prize in the prestigious national-level Smart India Hackathon since 2019.</p> -->
                         <!-- <a href="#" class="boxed-btn3  wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".7s">Register</a> -->
                     </div>
                 </div>
@@ -272,7 +268,7 @@
                                     <!-- <h4 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">KNOWLWGE BOWL</h4> -->
                                 </div>
                                 <div class="thumb wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                                    <a href="event_detail.html?eventId=67890">
+                                    <a href="event_detail.html?eventId=1">
                                         <!-- <img src="img/shape/shape_1.svg" alt=""> -->
                                         <img src="img/event1.jpg" alt="">
                                        </a>
@@ -289,7 +285,9 @@
                                     <!-- <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">12 Feb 2020</h4> -->
                                 </div>
                                 <div class="thumb wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
-                                    <img src="img/event2.jpg" alt="">
+                                    <a href="event_detail.html?eventId=2">
+                                        <img src="img/event2.jpg" alt="">
+                                    </a>
                                 </div>
                                 <!-- <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".6s">Mr. Zosoldos</h4> -->
                             </div>
@@ -302,7 +300,11 @@
                                     <!-- <h4 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">12 Feb 2020</h4> -->
                                 </div>
                                 <div class="thumb  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                                    <img src="img/event3.jpg" alt="">
+                                    <a href="event_detail.html?eventId=3">
+                                        <img src="img/event3.jpg" alt="">
+
+                                    </a>
+                                    <!-- <img src="img/event3.jpg" alt=""> -->
                                 </div>
                                 <!-- <h4 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Mr. Zosoldos</h4> -->
                             </div>
@@ -315,7 +317,7 @@
                                     <!-- <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">12 Feb 2020</h4> -->
                                 </div>
                                 <div class="thumb wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
-                                    <a href="event_detail.html?eventId=2">
+                                    <a href="event_detail.html?eventId=4">
                                         <img src="img/event4.jpg" alt="">
 
                                     </a>
@@ -332,7 +334,10 @@
                                     <!-- <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">12 Feb 2020</h4> -->
                                 </div>
                                 <div class="thumb wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
-                                    <img src="img/event5.jpg" alt="">
+                                    <a href="event_detail.html?eventId=5">
+                                        <img src="img/event5.jpg" alt="">
+
+                                    </a>
                                 </div>
                                 <!-- <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".6s">Mr. Zosoldos</h4> -->
                             </div>
@@ -345,50 +350,89 @@
 
 
     <!-- registration form  -->
-   
-      
+    <div id="registration-form-section" class="bg-dark" style="padding-top: 50px; padding-bottom: 50px;">
+        <div class="form-container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="form-left">
+                <!-- <h1>Account Details</h1> -->
+                <h1 class="account-details">
+                    <p> <span>Account :</span>
+                        Acc no 162101000011791</p>
+                    <p> <span>IFSC code :</span>
+                        IFSC IOBA0001621</p>
+                    <p> <span>Phone no</span>
+                        9025788989</p>
+                </h1>
 
-    <!-- map_area_start  -->
-    <div class="map_area">
-        <div id="map" style="height: 600px; position: relative; overflow: hidden;">
-        
+                <div>
+                    <img  src="./img/symoqr.jpeg" class="event-img" width="500" alt="Event Image">
+                </div>
+            </div>
+    
+            <div class="form-right">
+                <div class="form-content">
+                    <p class="form-header">
+                        Register your participation details for <span class="event-highlight">TECHQUEST-24</span>
+                    </p>
+                    <form  action="" class="form-registration">
+                        <input type="text" placeholder="Your Team Name" class="input-full-width" />
+                        <input type="text" placeholder="Your College Name" class="input-field" />
+                        <input type="text" placeholder="Team Leader / Member One" class="input-field" />
+                        <input type="text" placeholder="Member Two (Optional)" class="input-field" />
+                        <input type="text" placeholder="Member Three (Optional)" class="input-field" />
+                        <input type="text" placeholder="Email" class="input-field" />
+                        <input type="text" placeholder="Mobile Number" class="input-field" />
+                        
+                        <div class="event-checkboxes">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="knowledge-bowl" />
+                                <label for="knowledge-bowl">Knowledge Bowl (2 M/E)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="quizardry" />
+                                <label for="quizardry">Quizardry (2 M/E)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="tech-vein" />
+                                <label for="tech-vein">Tech Vein (3 M/E)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="design" />
+                                <label for="design">Design (1 M/E)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="codelog" />
+                                <label for="codelog">CodeLog (1 M/E)</label>
+                            </div>
+                        </div>
+    
+                        <p class="form-note">* M/E - Max team members allowed per event.</p>
+    
+                        <div class="form-upload-wrapper">
+                            <div class="file-upload-section">
+                                <label for="payment-screenshot">Payment Screenshot</label>
+                                <input type="file" id="payment-screenshot" />
+                            </div>
+                        </div>
+                        
+                        <p class="form-note">* If you want to pay on the spot, you don't need to provide a payment screenshot.</p>
+                        <button class="form-submit-btn" >REGISTER</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <script>
-            function initMap() {
-                var uluru = {
-                    lat: -25.363,
-                    lng: 131.044
-                };
-                var grayStyles = [{
-                        featureType: "all",
-                        stylers: [{
-                                saturation: -90
-                            },
-                            {
-                                lightness: 50
-                            }
-                        ]
-                    },
-                    {
-                        elementType: 'labels.text.fill',
-                        stylers: [{
-                            color: '#ccdee9'
-                        }]
-                    }
-                ];
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    center: {
-                        lat: -31.197,
-                        lng: 150.744
-                    },
-                    zoom: 9,
-                    styles: grayStyles,
-                    scrollwheel: false
-                });
-            }
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&amp;callback=initMap">
-        </script>
+    </div>
+    
+    
+    
+    <!-- map_area_start  -->
+    <div class="map-area">
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.5911599531914!2d78.7618656748755!3d10.294488089826467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b007b9be3b6b9c1%3A0x7dc82f4a20569695!2sMount%20Zion%20College%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1726206888338!5m2!1sen!2sin" 
+                width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+    
         <!-- <div class="location_information black_bg wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
             <h3>Concert 2020</h3>
             <div class="info_wrap">
@@ -452,6 +496,15 @@
         </div>
     </div> -->
     <!-- brand_area_end  -->
+    <div class="container">
+        <!-- <div class="info-section">
+            <h2>The Registration Fee per member is ₹100</h2>
+            <div class="screenshot-placeholder">
+                
+                <img src="./img/event2.jpg" width="200" alt="Screenshot Placeholder" />
+            </div>
+        </div> -->
+        
     <!-- footer_start  -->
     <footer id="contact" class="footer">
         <div class="footer_top">
@@ -460,8 +513,8 @@
                     <div class="col-lg-6 col-md-8">
                         <div class="footer_widget">
                             <div class="address_details text-center">
-                                <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">12 Feb, 2020</h4>
-                                <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Green Avenue, New York</h3>
+                                <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">07 Oct, 2024</h4>
+                                <!-- <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Green Avenue, New York</h3> -->
                                 <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">The event regularly attracts a diverse range of attendees from around the world.</p>
                                 <a href="#" class="boxed-btn3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Register</a>
                             </div>

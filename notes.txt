@@ -1,1 +1,23 @@
 font --- Montserrat
+
+
+1- knowledgebowl
+2- Quizardry
+3- Tech vein
+4- Design Up
+5- CodeLog
+
+
+
+A team can have a maximum of 2 participants.
+Each team will have a 5-minute allocation for their presentation, followed by a 2-minute session dedicated to questions and answers.
+While you have the flexibility to select your presentation topics, please ensure that they are relevant to technological advancements. Kindly have your PowerPoint presentation saved on a USB drive as a precautionary measure.
+Please use the provided link to upload your presentation file. To ensure organized management, please adhere to the specified file name format:
+File Name - TEAMNAME_COLLEGENAME
+Upload Link - https://mzcet.in/techquest23/zcloud/
+If you have any problem in uploading your ppt using the above link, use the drive link. - Google Drive
+
+Student coordinator : Semila S
+Venue : Auditorium
+
+For queries : +91 7010036887

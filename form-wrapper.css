@@ -1,0 +1,9 @@
+.wrapper{
+    height: 100vh;
+}
+.form-wrapper{
+    
+    display: flex;
+    justify-content: center;
+
+}

@@ -1,174 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event Detail</title>
+    <link rel="stylesheet" href="./glass.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/gijgo.css" />
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/slicknav.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0e213d;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
+      body {
+        /* background: linear-gradient(135deg, #0e153a 0%, #1c3556 100%);
+             */
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.76),
+            rgba(0, 0, 0, 0.9)
+          ),
+          url("./img/eventbg.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        /* background-blend-mode: ; */
+        /* background: #00070b; */
+        color: #f0f0f0;
+        /* font-family: 'Arial', sans-serif; */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        align-items: center;
+        min-height: 100vh;
+      }
 
+      .container {
+        /* align-content: first baseline;
+         */
+         /* align-items: start; */
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .container img {
+        width: 100%;
+        max-width: 600px;
+        /* padding-top: 200px; */
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+      }
+
+      /* .container img:hover {
+            transform: scale(1.05);
+        } */
+
+      .details {
+        width: 100%;
+        max-width: 800px;
+        /* margin-top: 200px; */
+        padding-top: 100px; 
+        /* padding: 20px; */
+        padding-left: 20px;
+        
+        /* background: rgba(255, 255, 255, 0.1); */
+        border-radius: 15px;
+        /* backdrop-filter: blur(10px); */
+        /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37); */
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+      }
+
+      /* .details:hover {
+            background: rgba(255, 255, 255, 0.2);
+        } */
+
+      .details h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #f0a500;
+        animation: slideIn 1s ease-out;
+      }
+
+      @keyframes slideIn {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .details p {
+        font-size: 18px;
+        margin-bottom: 15px;
+        line-height: 1.6;
+        color: #e0e0e0;
+      }
+
+      .details strong {
+        color: #f0a500;
+      }
+
+      .rules {
+        margin-bottom: 50px;
+        /* margin-top: 20px; */
+      }
+
+      .rules p {
+        margin-bottom: 10px;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+      }
+
+      .go-back {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #f0a500;
+        color: #0e213d;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-bottom: 20px;
+        font-weight: bold;
+        /* margin-top: 20   px; */
+        transition: background-color 0.3s, transform 0.3s;
+        animation: fadeInUp 1.2s ease-out;
+      }
+
+      .go-back:hover {
+        background-color: #d18c00;
+        transform: translateY(-3px);
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (min-width: 768px) {
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .container img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 10px;
+          flex-direction: row;
+          justify-content: space-between;
         }
 
         .details {
-            width: 100%;
-            max-width: 800px;
-            padding: 20px;
-            background-color: #1c3556;
-            border-radius: 10px;
-            margin-top: 20px;
+          margin-left: 20px;
+          margin-top: 0;
         }
 
         .details h1 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #f0a500;
+          font-size: 42px;
         }
 
         .details p {
-            font-size: 16px;
-            margin-bottom: 15px;
-            line-height: 1.6;
+          font-size: 18px;
         }
-
-        .rules {
-            margin-bottom: 20px;
-        }
-
-        .rules p {
-            margin-bottom: 10px;
-        }
-
-        .details strong {
-            color: #f0a500;
-        }
-
-        .go-back {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #f0a500;
-            color: #0e213d;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        .go-back:hover {
-            background-color: #d18c00;
-        }
-
-        /* Responsive Design */
-        @media (min-width: 768px) {
-            .container {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-
-            .details {
-                margin-left: 20px;
-                margin-top: 0;
-            }
-
-            .details h1 {
-                font-size: 36px;
-            }
-
-            .details p {
-                font-size: 18px;
-            }
-        }
-
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container">
-        <img src="img/program_details/placeholder.png" alt="Event Image" id="eventImage">
+      <img
+        src="img/program_details/placeholder.png"
+        alt="Event Image"
+        id="eventImage"
+      />
 
-        <div class="details">
-            <h1 id="eventTitle"></h1>
+      <div class="details">
+        <h1 id="eventTitle"></h1>
 
-            <div class="rules">
-                
-            </div>
-            <a href="index.html" class="go-back">Go Back</a>
-        </div>
+        <div class="rules"></div>
+        <a href="index.html" class="go-back">Go Back</a>
+      </div>
     </div>
 
     <script>
-        // Get URL parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const eventId = urlParams.get('eventId');
+              const urlParams = new URLSearchParams(window.location.search);
+              const eventId = urlParams.get('eventId');
 
-        // Log eventId to console
-        console.log("Event ID:", eventId);
-
-        // Simulated event details (in a real app, you'd fetch these from a server)
-        const eventDetails = {
-            '1': {
-                title: "Codelog [Competitive Programming]",
-                rules: [
-                    "Copy-pasting is strictly not allowed.",
-                    "If needed, participants should explain the logic to the event coordinator.",
-                    "If you require any clarification, please direct your inquiries exclusively to the designated volunteers only."
-                ],
-                coordinator: "Vanchinathan P",
-                contact: "+91 6369025081",
-                venue: "Lab A210",
-                image: "img/program_details/2.png"
-            },
-            '2': {
-                title: "Design Up [UI/UX Designing]",
-                rules: [
-                    "1) Participants will have a maximum of 45 minutes.",
-                    "2) Design models will be provided, and participants need to recreate these models.",
-                    "3) Participants are advised to use Figma as a designing tool.",
-                    "4) Participants are not allowed to Google for ideas."
-                ],
-                coordinator: "John Doe",
-                contact: "+91 9876543210",
-                venue: "Room B120",
-                image: "img/program_details/3.png"
-            }
-        };
-
-        // Get event data based on eventId
-        const eventData = eventDetails[eventId];
-
-        // Display the event details if the eventId exists
-        if (eventData) {
-            document.getElementById("eventTitle").textContent = eventData.title;
-            const rulesContainer = document.querySelector(".rules");
-            rulesContainer.innerHTML = "<p><strong>Rules:</strong></p>" + eventData.rules.map(rule => `<p>${rule}</p>`).join('');
-            document.querySelector(".details").innerHTML += `<p><strong>Student Coordinator:</strong> ${eventData.coordinator}</p>`;
-          
-            document.querySelector(".details").innerHTML += `<p><strong>Venue:</strong> ${eventData.venue}</p>`;
-            document.querySelector(".details").innerHTML += `<p><strong>Contact No:</strong> ${eventData.contact}</p>`;
-            document.getElementById("eventImage").src = eventData.image;
-        } else {
-            document.querySelector(".details").innerHTML = "<p>Event not found.</p>";
+              const eventDetails={
+          "1": {
+            "title": "COLLOQUIUM – (Paper Presentation)",
+            "tagline": "Elucidate your ideas within the synergy of brilliant minds",
+            "description": "Elucidate your ideas within the synergy of brilliant minds where innovation and creativity thrive. This could be your moment to light up new insights and encourage collaborative breakthroughs. Interact with leading thinkers, share your vision, and take part in an energetic exchange of knowledge that pushes the boundaries of what is possible.",
+            "rules": [
+              "A Team can have a maximum of 2 participants",
+              "Please upload your presentation by scanning the provided QR code.",
+              "Each presentation will last 5 minutes, followed by a 2-minute Q&A session.",
+              "Upload your presentation to the designated portal. Kindly have your PowerPoint presentation saved on a USB drive as a precautionary measure.",
+              "Papers will be judged based on originality, relevance, clarity, and impact."
+            ],
+            "coordinator": "Vanchinathan P",
+            "contact": "+91 6369025081",
+            "venue": "Hall A210",
+            "image": "img/event1.jpg"
+          },
+          "2": {
+            "title": "QUAESTIUM – (Quiz)",
+            "tagline": "Challenge Your Mind",
+            "description": "Experience the ultimate in quizzing with QUAESTIUM: find out just how well you know your stuff in real time, push yourself through dynamic challenges, and show off your expertise. On your marks, get set, compete: it's a world of competition, but will you be at the top and join the elite quizzers?",
+            "rules": [
+              "A Team can have a maximum of 2 participants",
+              "The quiz will consist of 3 rounds",
+              "Points are awarded based on the accuracy of answers and response time."
+            ],
+            "coordinator": "John Doe",
+            "contact": "+91 9876543210",
+            "venue": "Room B120",
+            "image": "img/event2.jpg"
+          },
+          "3": {
+            "title": "ALGOTIUM – (Competitive Programming)",
+            "tagline": "Code Smarter. Compete Harder.",
+            "description": "Dive into the ultimate coding challenge, where algorithmic expertise meets competitive spirit. Engage in a series of mind-bending problems that test the limits of your programming skills. Compete against the best coders, showcase your mastery of logic and innovation, and rise to the top of the leaderboard.",
+            "rules": [
+              "A Team can have a maximum of 2 participants",
+              "The competition will consist of 10 problems of varying difficulty.",
+              "Participants may use their own laptops.",
+              "Solutions will be evaluated based on correctness, efficiency, and code quality."
+            ],
+            "coordinator": "Jane Smith",
+            "contact": "+91 7654321098",
+            "venue": "Lab C330",
+            "image": "img/event3.jpg"
+          },
+          "4": {
+            "title": "INNOVARIUM – (Project Exposition)",
+            "tagline": "Innovate, Showcase, Inspire",
+            "description": "Innovarium is the premier project expo where teams showcase their innovative projects and solutions. Participants present their work to a panel of expert jurors who evaluate each project based on creativity, technical execution, and impact.",
+            "rules": [
+              "Equipment and materials must be set up 20 minutes before the event starts.",
+              "Attendees are encouraged to ask questions and interact with the technology.",
+              "Follow all safety protocols and guidelines provided by the organizers."
+            ],
+            "coordinator": "Emily Johnson",
+            "contact": "+91 8765432109",
+            "venue": "Lab D210",
+            "image": "img/event4.jpg"
+          },
+          "5": {
+            "title": "DESIGNIUM – (Figma Designing)",
+            "tagline": "Designium Spark",
+            "description": "Welcome to Designium, the premier UI/UX design challenge where creativity meets functionality. Show off your skills by crafting visually stunning user interfaces. Tackle real-world design problems, balance aesthetics with usability, and use cutting-edge tools to push the limits of user experience.",
+            "rules": [
+              "Participants must use Figma for all designs.",
+              "Participants will receive a design brief at the start of the event.",
+              "The challenge will last for 45 minutes.",
+              "Designs will be evaluated based on creativity, usability, and adherence to the brief."
+            ],
+            "coordinator": "Vanchinathan P",
+            "contact": "+91 6369025081",
+            "venue": "Hall A210",
+            "image": "img/event5.jpg"
+          },
+          "6": {
+            "title": "BLENDARIUM – (Blender Designing)",
+            "tagline": "Redefining 3D Design",
+            "description": "Welcome to Blendarium, the ultimate animation showdown where creativity meets innovation. Present your skills in animation through small, striking animations that make a statement to both inspire and be inspired.",
+            "rules": [
+              "Use Blender for all Models.",
+              "Participants will receive a sample 3D Model to replicate.",
+              "The Model creation period will be 1 hour.",
+              "Submit your Blender file without Applying Materials and Texture.",
+              "Models will be judged based on the quality and technical execution."
+            ],
+            "coordinator": "John Doe",
+            "contact": "+91 9876543210",
+            "venue": "Lab B120",
+            "image": "img/event6.jpg"
+          }
         }
-    </script>
+      
 
-</body>
+              const eventData = eventDetails[eventId];
+
+              if (eventData) {
+                  document.getElementById("eventTitle").textContent = eventData.title;
+                  const rulesContainer = document.querySelector(".rules");
+                  rulesContainer.innerHTML = "<p><strong>Rules:</strong></p>" + eventData.rules.map(rule => `<p>${rule}</p>`).join('');
+                  document.querySelector(".details").innerHTML += `<p><strong>Student Coordinator:</strong> ${eventData.coordinator}</p>`;
+                  document.querySelector(".details").innerHTML += `<p><strong>Venue:</strong> ${eventData.venue}</p>`;
+                  document.querySelector(".details").innerHTML += `<p><strong>Contact No:</strong> ${eventData.contact}</p>`;
+                  document.getElementById("eventImage").src = eventData.image;
+              } else {
+                  document.querySelector(".details").innerHTML = "<p>Event not found.</p>";
+              }
+    </script>
+  </body>
 </html>
