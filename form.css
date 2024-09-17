@@ -86,7 +86,9 @@ padding: 0 100px;
 
 .checkbox-item {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    gap: 2px;
+    /* justify-content: center; */
 }
 
 .form-note {

@@ -282,3 +282,19 @@
   top: -5px;
   padding-bottom: 3px;
 }
+
+
+/* changes maded */
+
+.slicknav_nav {
+  background-color: #333; /* Dark background for visibility */
+}
+
+.slicknav_nav a {
+  color: #fff !important; /* Ensure text is white */
+}
+
+.slicknav_nav a:hover {
+  background-color: #f66950 !important; /* Change background on hover */
+  color: #fff !important;
+}

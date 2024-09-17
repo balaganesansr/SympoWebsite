@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="./navbar.css">
+</head>
+<body>
+    <div class="nav-wrapper">
+        <div>
+            <h1>MZCET</h1>
+        </div>
+        <div>
+            <nav id="navbar">
+                <ul class="nav-links-n" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#event">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="https://www.mzcet.in/default.php">MZ Home</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <div>
+                <a href="#form">Register</a>
+            </div>
+        </div>
+        <!-- Menu icon for mobile -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <script src="./navbar.js"></script>
+</body>
+<script>
+    const navbarLinks = document.getElementById('nav-links');
+const menuIcon = document.querySelector('.menu-icon');
+
+function toggleMenu() {
+    navbarLinks.classList.toggle('active');
+}
+
+// Close menu when a link is clicked
+navbarLinks.addEventListener('click', (event) => {
+    if (event.target.tagName === 'A') {
+        navbarLinks.classList.remove('active');
+    }
+});
+</script>
+</html>

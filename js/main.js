@@ -364,3 +364,12 @@ mailChimp();
       })
 
 })(jQuery);	
+
+
+
+// changes maded
+
+// Close the SlickNav menu when a link is clicked
+$('.slicknav_nav a').on('click', function() {
+  $('.slicknav_btn').trigger('click'); // Simulates clicking the menu button to close it
+});
