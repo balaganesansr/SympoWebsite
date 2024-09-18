@@ -2,7 +2,6 @@
 
 body {
     font-family: "Montserrat", sans-serif;
-    /* background-color: #1a1a1a; */
     margin: 0;
     padding: 0;
     color: #ffffff;
@@ -13,7 +12,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     gap: 60px;
-padding: 0 100px;
+    padding: 0 100px;
 }
 
 .form-left {
@@ -27,7 +26,6 @@ padding: 0 100px;
     height: auto;
     border-radius: 8px;
     padding: 0 20px;
-
 }
 
 .form-right {
@@ -61,7 +59,6 @@ padding: 0 100px;
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -88,14 +85,14 @@ padding: 0 100px;
     display: flex;
     align-items: baseline;
     gap: 2px;
-    /* justify-content: center; */
 }
 
 .form-note {
     font-size: 0.9rem;
     margin-bottom: 20px;
 }
-.form-upload-wrapper{
+
+.form-upload-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,10 +106,9 @@ padding: 0 100px;
     align-items: center;
     padding: 20px;
     border: 1px dashed white;
-
-     
 }
-.file-upload-section input{
+
+.file-upload-section input {
     color: white;
 }
 
@@ -166,13 +162,32 @@ padding: 0 100px;
         padding: 10px;
         font-size: 0.9rem;
     }
+
+    /* File Upload Adjustments for Mobile Devices */
+    .file-upload-section {
+        width: 100%; /* Full width on smaller devices */
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .file-upload-section input {
+        width: 90%;
+        font-size: 0.9rem;
+    }
 }
 
 /* Further adjustments for very small screens (up to 480px) */
 @media screen and (max-width: 480px) {
-    .file-upload-section{
-        width: 50%;
+    .file-upload-section {
+        width: 80%;
+        padding: 10px;
     }
+
+    .file-upload-section input {
+        width: 80%;
+        font-size: 0.8rem;
+    }
+
     .form-container {
         padding: 30px 10px;
         gap: 20px;
@@ -211,8 +226,6 @@ padding: 0 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 2px solid black; */
-    /* background: #000; */
     margin: 20px 0;
     position: relative;
     width: 100%;
@@ -225,7 +238,6 @@ padding: 0 100px;
     border: 0;
 }
 
-/* Responsive Styles for Mobile Devices */
 @media screen and (max-width: 768px) {
     .map-area {
         height: 60vh;
@@ -247,15 +259,14 @@ padding: 0 100px;
     }
 }
 
-.form-left{
+.form-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.account-details p{
+.account-details p {
     font-weight: bold;
     color: white;
-
 }
