@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $ftp_server = "ftp.mzcet.in";
             $ftp_username = "techquest23@mzcet.in";
             $ftp_password = "Volume@3908";
-            $ftp_directory = "/files/";
+            $ftp_directory = "/screenshots/";
 
             // Ensure the file input is set and not empty
             if (isset($_FILES['fileToUpload']) && $_FILES['fileToUpload']['error'] == UPLOAD_ERR_OK) {
@@ -112,13 +112,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 );
 
                 if ($stmt->execute()) {
-                    header('Location: success.html');
+                    // header('Location: success.html');
+                    header('Location: Successfull.html');
                     exit();
                 } else {
                     echo "Error: " . $stmt->error;
                 }
             } else {
-                header('Location: alreadyRegistered.html');
+                // header('Location: alreadyRegistered.html');
+                header('Location: someone.html');
+
                 exit();
             }
 
@@ -130,7 +133,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die();
     }
 } else {
-    header('Location: error.html');
+    // header('Location: error.html');
+    header('Location: Error.html');
+
     exit();
 }
 ?>
