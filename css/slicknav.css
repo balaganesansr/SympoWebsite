@@ -6,32 +6,36 @@
 .slicknav_btn {
   position: relative;
   display: block;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   float: right;
-  padding: 0.438em 0.625em 0.438em 0.625em;
-  line-height: 1.125em;
+  /* padding: 0.438em 0.625em 0.438em 0.625em; */
+  /* line-height: 1.125em; */
   cursor: pointer;
 }
 .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
-  margin-top: 0.188em;
+  /* margin-top: 0.188em; */
 }
 
 .slicknav_menu {
   zoom: 1;
+  /* margin-bottom: 10000px; */
 }
 .slicknav_menu .slicknav_menutxt {
   display: block;
   line-height: 1.188em;
   float: left;
+  
 }
-.slicknav_menu .slicknav_icon {
+.slicknav_menu .slicknav_icon { 
+  /* padding-bottom: 20px; */
   float: left;
   width: 1.125em;
   height: 0.875em;
-  margin: 0.188em 0 0 0.438em;
+  /* margin: 0.188em 0 0 0.438em; */
 }
 .slicknav_menu .slicknav_icon:before {
   background: transparent;
+  
   width: 1.125em;
   height: 0.875em;
   display: block;
@@ -39,9 +43,11 @@
   position: absolute;
 }
 .slicknav_menu .slicknav_no-text {
+  
   margin: 0;
 }
 .slicknav_menu .slicknav_icon-bar {
+  
   display: block;
   width: 1.125em;
   height: 0.125em;
@@ -49,19 +55,23 @@
 .slicknav_menu:before {
   content: " ";
   display: table;
+  
 }
 .slicknav_menu:after {
   content: " ";
   display: table;
+  
   clear: both;
 }
 
 .slicknav_nav {
   clear: both;
+  
+
 }
 .slicknav_nav ul {
   display: block;
-  background: gray;
+  /* background: red; */
   color: #f66950;
 }
 .slicknav_nav li {
@@ -70,6 +80,7 @@
   
 }
 .slicknav_nav .slicknav_arrow {
+  /* background: green; */
   font-size: 0.8em;
   margin: 0 0 0 0.4em;
 }
@@ -81,20 +92,24 @@
 }
 .slicknav_nav .slicknav_row {
   display: block;
+  
 }
 .slicknav_nav a {
   display: block;
+  
 }
 .slicknav_nav .slicknav_parent-link a {
   display: inline;
 }
 
 .slicknav_brand {
+  
   float: left;
 }
 
 .slicknav_menu {
   font-size: 16px;
+  color: green;
   box-sizing: border-box;
   background: #4c4c4c;
   padding: 5px;
@@ -199,7 +214,9 @@
 }
 .slicknav_menu {
   background: transparent;
+  
   margin-top: 10px;
+  
 }
 .slicknav_menu .slicknav_icon-bar {
   background-color: #000;
@@ -245,6 +262,7 @@
 .slicknav_nav {
   background: #fff;
   float: right;
+  
   margin-top: 0;
   padding: 0;
   width: 100%;
