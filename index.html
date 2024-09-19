@@ -328,7 +328,7 @@
                     <form id="registrationForm" action="./register.php" method="POST" enctype="multipart/form-data" class="form-registration">                        
                         <input type="text" required name="teamName" placeholder="Your Team Name" class="input-full-width" />
                         <input type="text" required name="collegeName" placeholder="Your College Name" class="input-field" />
-                        <input type="text" required name="leader" placeholder="Team Leader / Member One" class="input-field" />
+                        <input type="text" required name="teamLeader" placeholder="Team Leader / Member One" class="input-field" />
                         <input type="text"  name="memberTwo" placeholder="Member Two (Optional)" class="input-field" />
                         <input type="text" name="memberThree" placeholder="Member Three (Optional)" class="input-field" />
                         <input type="email" required name="email"  placeholder="Email" class="input-field" />
@@ -370,7 +370,8 @@
                         <div class="form-upload-wrapper">
                             <div class="file-upload-section">
                                 <label for="payment-screenshot">Payment Screenshot</label>
-                                <input type="file" id="payment-screenshot" name="payment-screenshot" class="input-file" required />
+                                <input type="file" name="fileToUpload"
+                                id="fileToUpload" class="input-file" />
                             </div>
                         </div>
     
@@ -412,7 +413,7 @@
                             <div class="address_details text-center">
                                 <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">07 Oct, 2024</h4>
                                 <!-- <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Green Avenue, New York</h3> -->
-                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">The event regularly attracts a diverse range of attendees from around the world.</p>
+                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Contact us : techquest24@mountzion.ac.in</p>
                                 <a href="#form" class="boxed-btn3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Register</a>
                             </div>
                         </div>
@@ -437,7 +438,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> | All
     <!-- footer_end  -->
 
     <!-- JS here -->
-    <script src="./formsubmit.js" ></script>
+    <!-- <script src="./formsubmit.js" ></script>    -->
 
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
