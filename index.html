@@ -8,12 +8,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="./form.css">
@@ -42,10 +42,6 @@
 </head>
 
 <div>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
     <!-- header-start -->
     <header>
         <div class="header-area ">
@@ -117,70 +113,6 @@
         </div>
     </div>
     <!-- slider_area_end -->
-
-    <!-- performar_area_start  -->
-    <!-- <div class="performar_area black_bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section_title mb-80">
-                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">Performer</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <div  class="single_performer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                                <div data-tilt class="thumb">
-                                    <img src="img/performer/1.png" alt="">
-                                </div>
-                                <div class="performer_heading">
-                                    <h4>Mr. Zosoldos</h4>
-                                    <span>Acoustic drum</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div  class="single_performer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                                <div data-tilt class="thumb">
-                                    <img src="img/performer/2.png" alt="">
-                                </div>
-                                <div class="performer_heading">
-                                    <h4>Protik Hasan</h4>
-                                    <span>Acoustic drum</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div  class="single_performer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                                <div data-tilt class="thumb">
-                                    <img src="img/performer/3.png" alt="">
-                                </div>
-                                <div class="performer_heading">
-                                    <h4>Salmon Vicky</h4>
-                                    <span>Acoustic drum</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div   class="single_performer wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
-                                <div data-tilt class="thumb">
-                                    <img src="img/performer/4.png" alt="">
-                                </div>
-                                <div class="performer_heading">
-                                    <h4>Filaris Habol</h4>
-                                    <span>Acoustic drum</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- performar_area_end  -->
 
     <!-- about_area_start  -->
     <div id="about-us" class="about_area black_bg">
@@ -371,12 +303,15 @@
     <div id="form" class="" style="background: #05030a; padding-top: 50px; padding-bottom: 50px;">
         <div class="form-container" style="display: flex; justify-content: space-between; align-items: center;">
             <div class="form-left">
+                <div class="offer-wrapper">
+                    The Registeration Fees for first 100 members is <span class="strike-ruppee">&#8377;200</span> <span class="strike-ruppee2">   &#8377;150</span>
+                </div>
                 <h1 class="account-details">
                     <p> <span>Account :</span>
-                        Acc no 162101000011791</p>
+                        162101000011791</p>
                     <p> <span>IFSC code :</span>
-                        IFSC IOBA0001621</p>
-                    <p> <span>Phone no</span>
+                        IOBA0001621</p>
+                    <p> <span>Phone :</span>
                         9025788989</p>
                 </h1>
     
@@ -390,54 +325,62 @@
                     <p class="form-header">
                         Register your participation details for <span class="event-highlight">TECHQUEST-24</span>
                     </p>
-                    <form action="" class="form-registration">
-                        <input type="text" placeholder="Your Team Name" class="input-full-width" />
-                        <input type="text" placeholder="Your College Name" class="input-field" />
-                        <input type="text" placeholder="Team Leader / Member One" class="input-field" />
-                        <input type="text" placeholder="Member Two (Optional)" class="input-field" />
-                        <input type="text" placeholder="Member Three (Optional)" class="input-field" />
-                        <input type="text" placeholder="Email" class="input-field" />
-                        <input type="text" placeholder="Mobile Number" class="input-field" />
-                        
+                    <form id="registrationForm" action="./register.php" method="POST" enctype="multipart/form-data" class="form-registration">                        
+                        <input type="text" required name="teamName" placeholder="Your Team Name" class="input-full-width" />
+                        <input type="text" required name="collegeName" placeholder="Your College Name" class="input-field" />
+                        <input type="text" required name="leader" placeholder="Team Leader / Member One" class="input-field" />
+                        <input type="text"  name="memberTwo" placeholder="Member Two (Optional)" class="input-field" />
+                        <input type="text" name="memberThree" placeholder="Member Three (Optional)" class="input-field" />
+                        <input type="email" required name="email"  placeholder="Email" class="input-field" />
+                        <input type="number" required name="mobileNumber" placeholder="Mobile Number" class="input-field" />
+    
                         <div class="event-checkboxes">
                             <div class="checkbox-item">
-                                <input type="checkbox" id="colloquium" />
+                                <input type="checkbox" id="colloquium" name="colloquium" />
                                 <label for="colloquium">COLLOQUIUM (2 M/E)</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" id="quaestium" />
+                                <input type="checkbox" id="quaestium" name="quaestium" />
                                 <label for="quaestium">QUAESTIUM (2 M/E)</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" id="algotium" />
+                                <input type="checkbox" id="algotium" name="algotium" />
                                 <label for="algotium">ALGOTIUM (2 M/E)</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" id="innovarium" />
+                                <input type="checkbox" id="innovarium" name="innovarium" />
                                 <label for="innovarium">INNOVARIUM (Team)</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" id="designium" />
+                                <input type="checkbox" id="designium" name="designium" />
                                 <label for="designium">DESIGNIUM (1 M/E)</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" id="blendarium" />
+                                <input type="checkbox" id="blendarium" name="blendarium" />
                                 <label for="blendarium">BLENDARIUM (1 M/E)</label>
                             </div>
                         </div>
+                        
+                        <!-- File Upload -->
+                        
+                        
     
                         <p class="form-note">* M/E - Max team members allowed per event.</p>
     
                         <div class="form-upload-wrapper">
                             <div class="file-upload-section">
                                 <label for="payment-screenshot">Payment Screenshot</label>
-                                <input type="file" id="payment-screenshot" class="input-file" />
+                                <input type="file" id="payment-screenshot" name="payment-screenshot" class="input-file" required />
                             </div>
                         </div>
-                        
+    
                         <p class="form-note">* If you want to pay on the spot, you don't need to provide a payment screenshot.</p>
-                        <button class="form-submit-btn">REGISTER</button>
+                        <button type="submit" class="form-submit-btn">REGISTER</button>
                     </form>
+                    <!-- Error message container -->
+                <!-- <div id="errorMessages" style="color: red;"></div> -->
+                <!-- Success message container -->
+                <!-- <div id="successMessage" style="color: green;"></div> -->
                 </div>
             </div>
         </div>
@@ -455,78 +398,10 @@
         </div>
     </div>
     
-        <!-- <div class="location_information black_bg wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-            <h3>Concert 2020</h3>
-            <div class="info_wrap">
-                <div class="single_info">
-                    <span>Vanue:</span>
-                    <p>26/A, Coontum Avenu
-                        New York-2783</p>
-                </div>
-                <div class="single_info">
-                    <span>Phone:</span>
-                    <p>+10 (88) 267 368 283</p>
-                </div>
-                <div class="single_info">
-                    <span>Email:</span>
-                    <p>contact@concert20.com</p>
-                </div>
-            </div>
-        </div> -->
+       
     </div>
-    <!-- map_area_end  -->
-
-    <!-- brand_area_start  -->
-    <!-- <div class="brand_area black_bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section_title text-center mb-80">
-                        <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">Sponsor Logos</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="brand_wrap">
-                        <div class="brand_active owl-carousel">
-                            <div class="single_brand text-center">
-                                <img src="img/brand/1.png" alt="">
-                            </div>
-                            <div class="single_brand text-center">
-                                <img src="img/brand/2.png" alt="">
-                            </div>
-                            <div class="single_brand text-center">
-                                <img src="img/brand/3.png" alt="">
-                            </div>
-                            <div class="single_brand text-center">
-                                <img src="img/brand/4.png" alt="">
-                            </div>
-                            <div class="single_brand text-center">
-                                <img src="img/brand/5.png" alt="">
-                            </div>
-                            <div class="single_brand text-center">
-                                <img src="img/brand/1.png" alt="">
-                            </div>
-                            <div class="single_brand text-center">
-                                <img src="img/brand/2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- brand_area_end  -->
-    <div class="container">
-        <!-- <div class="info-section">
-            <h2>The Registration Fee per member is ₹100</h2>
-            <div class="screenshot-placeholder">
-                
-                <img src="./img/event2.jpg" width="200" alt="Screenshot Placeholder" />
-            </div>
-        </div> -->
-        
+    
+    <div class="container">        
     <!-- footer_start  -->
     <footer id="contact" class="footer">
         <div class="footer_top">
@@ -562,6 +437,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> | All
     <!-- footer_end  -->
 
     <!-- JS here -->
+    <script src="./formsubmit.js" ></script>
+
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -581,8 +458,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> | All
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/tilt.jquery.js"></script>
     <script src="js/plugins.js"></script>
-
-
 
     <!--contact js-->
     <script src="js/contact.js"></script>

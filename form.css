@@ -84,7 +84,7 @@ body {
 .checkbox-item {
     display: flex;
     align-items: baseline;
-    gap: 2px;
+    gap: 5px;
 }
 
 .form-note {
@@ -266,7 +266,43 @@ body {
     align-items: center;
 }
 
+.account-details{
+    border: 1px solid white;
+    padding: 10px;
+}
 .account-details p {
     font-weight: bold;
     color: white;
+    
 }
+.checkbox-item input[type="checkbox"]{
+    accent-color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    .about_info {
+      margin-top: 10px; /* Reduce the gap */
+    }
+
+    .about_thumb {
+      margin-bottom: 10px; /* Reduce the bottom margin of the image */
+    }
+  }
+
+  .offer-wrapper{
+    /* background: wheat; */
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+    padding-bottom: 40px;
+  }
+  .offer-wrapper .strike-ruppee{
+     /* background: red; */
+     text-decoration: line-through;
+  }
+  .offer-wrapper .strike-ruppee2{
+    /* background: red; */
+    font-weight: 900;
+    color: orangered;
+ }

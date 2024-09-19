@@ -72,7 +72,7 @@ form {
     margin-bottom: 15px;
 }
 
-input[type="email"], input[type="password"] {
+ input[type="password"] {
     width: 48%;
     padding: 10px;
     background-color: #333;

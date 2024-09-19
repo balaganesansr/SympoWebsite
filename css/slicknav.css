@@ -61,9 +61,13 @@
 }
 .slicknav_nav ul {
   display: block;
+  background: gray;
+  color: #f66950;
 }
 .slicknav_nav li {
   display: block;
+   background: gray;
+  
 }
 .slicknav_nav .slicknav_arrow {
   font-size: 0.8em;
@@ -176,7 +180,19 @@
   position: absolute;
   right: 10px;
   width: 96%;
+  /* color: orange; */
+  text-align: center;
+  color: #f79960;
+  /* background: #000; */
   z-index: 99;
+}
+.mobile_menu nav{
+  color: green;
+  background: red; /* New text color */
+}
+.mobile_menu.active {
+  display: block;
+   /* New background color for active mobile menu */
 }
 .slicknav_menu .slicknav_menutxt {
   display: none;

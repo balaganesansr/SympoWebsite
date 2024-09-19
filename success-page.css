@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .success-wrap, .already-wrap {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  .success-content, .already-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .success-icon, .already-icon {
+    font-size: 64px;
+    color: #28a745; /* Green for success */
+  }
+  
+  .already-icon {
+    color: #ffcc00; /* Yellow for already registered */
+  }
+  
+  .success-message, .already-message {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .success-message {
+    color: #28a745; /* Green for success */
+  }
+  
+  .already-message {
+    color: #ffcc00; /* Yellow for already registered */
+  }
+  
