@@ -33,10 +33,27 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="./navbar.css">
+
+    <!-- slider adding -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="./swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./slidercss.css">
+
+    <!-- font adding  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Unlock&display=swap" rel="stylesheet">
     <style>
         .form-text{
             font-family: "Montserrat", sans-serif;
-        }   
+        }  
+        .heading_name{
+            font-family: "Unlock" , sans-serif;
+        }
     </style>
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
@@ -52,9 +69,9 @@
                             <div class="col-xl-3 col-lg-3">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <h1 style="color: white;padding-top: 20px; "> 
-                                             
-                                            <span style="color: #f66950;">MZ</span>CET
+                                        <h1 style="color: #f66950; padding-bottom: 10px; display: flex;"> 
+                                             <img src="./img/favicon.png"  width="55" alt="">
+                                            <span style="color: white;">MZ</span>CET
                                         </h1>
                                     </a>
                                 </div>
@@ -62,11 +79,11 @@
                             <div class="col-xl-6 col-lg-6">
                                 <div class="hambarger main-menu d-none d-lg-block">
                                     <nav>
-                                        <ul id="navigation" style=" justify-content: center; align-items: center; gap: 20px; ">
+                                        <ul id="navigation" style=" justify-content: center; align-items: center; gap: 20px; font-size: 25px;">
                                             <li><a href="index.html" style="color: white;">home</a></li>
+                                            <li><a href="#about-us" style="color: white;">About Us</a></li>
                                             <li><a href="#event" style="color: white;">Events</a></li>
                                             <li><a href="#contact" style="color: white;">Contact</a></li>
-                                            <li><a href="#about-us" style="color: white;">About Us</a></li>
                                             <li><a href="https://www.mzcet.in/default.php" style="color: white;">MZ Home</a></li>
                                         </ul>
                                     </nav>
@@ -75,11 +92,12 @@
                             <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                                 <div class="buy_tkt" style="display: flex; justify-content: flex-end; align-items: center;">
                                     <div class="book_btn d-none d-lg-block">
-                                        <a href="#form" style="display: inline-block; padding: 10px 20px; background-color: #f66950; color: white; border-radius: 5px; text-transform: uppercase;">Register</a>
+                                        <a href="#form" style="font-size: 24px; display: inline-block; padding: 10px 25px; background-color: #f66950; color: white; border-radius: 5px; text-transform: uppercase;">Register</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12">
+                                <!-- <div>skdnsldnslkdns</div> -->
                                 <div class="mobile_menu d-block d-lg-none"></div>
                             </div>
                         </div>
@@ -104,7 +122,9 @@
                             <div class="shape_2 wow fadeInDown" data-wow-duration="1s" data-wow-delay=".2s">
                                 <img src="img/shape/shape_2.svg" alt="">
                             </div>
-                            <span class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s" style="color: white ;">16 OCT, 2024</span>
+                            <span class="wow fadeInLeft heading_name" data-wow-duration="1s" data-wow-delay=".3s" style="color: white ; ">National level technical symposium<br>
+                             <span style="color: white;" class="heading_name">October 16</span>
+                            </span>
                             <h3 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">Techquest 2024</h3>
                             <p class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">Department of Computer Science and Engineering</p>
                         </div>
@@ -133,14 +153,16 @@
                             <!-- <img src="img/mzcet1.jpg" alt=""> -->
                         </div>
                         <div class="thumb_inner  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                            <img src="img/mzcet1.jpg" alt="">
+                            <img loading="lazy" decoding="async" role="article" src="img/mzcet1.jpg" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6">
                     <div class="about_info pl-68">
                         <h4 class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">Institution</h4>
-                        <p  class=" wow fadeInLeft" style="text-align: justify;" data-wow-duration="1s" data-wow-delay=".6s">The genesis of Mount Zion College of Engineering and Technology, Pudukkottai was in 2001. The Institution is approved by AICTE, and affiliated to Anna University, Chennai. This institution is accredited by National Assessment and Accreditation Council(NAAC) with A+ grade.</p>
+                        <p  class=" wow fadeInLeft" style="text-align: justify; " data-wow-duration="1s" data-wow-delay=".6s">The genesis of Mount Zion College of Engineering and Technology, Pudukkottai was in 2001. The Institution is approved by AICTE, and affiliated to Anna University, Chennai. This institution is accredited by National Assessment and Accreditation Council(NAAC) with A+ grade.
+                            It offers seven Undergraduate   programmes (Civil Engineering, Computer Science & Engineering, Information Technology, Artificial Intelligence and Data Science, Electrical & Electronics Engineering, Electronics & Communication Engineering and Mechanical Engineering) and two Postgraduate programmes (Computer Science& Engineering, Communication Systems)
+                        </p>
                         <!-- <a href="#" class="boxed-btn3  wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".7s">Register</a> -->
                     </div>
                 </div>
@@ -148,6 +170,111 @@
         </div>
     </div>
     <!-- about_area_end  -->
+     <!-- Slider area -->
+     <div class="section_title text-center">
+        <h3 class="wow fadeInRight" style=" color: white;" data-wow-duration="1s" data-wow-delay=".3s" >Achievements</h3>
+        <!-- <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s" >The event regularly attracts a diverse range of attendees from around the world, across different professions, and with different.</p> -->
+    </div>
+     <section class="containerslider">
+        <div class="card__container swiper">
+           <div class="card__content">
+              <div class="swiper-wrapper">
+                 <article class="card__article swiper-slide">
+                    <div class="card__image">
+                       <img loading="lazy" decoding="async" role="status" src="img/achieve/achieve.webp" alt="image" class="card__img">
+                       <div class="card__shadow"></div>
+                    </div>
+     
+                    <div class="card__data">
+                       <!-- <h3 class="card__name">Kell Dawx</h3> -->
+                       <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing.
+                       </p>
+     
+                       <!-- <a href="#" class="card__button">View More</a> -->
+                    </div>
+                 </article>
+     
+                 <article class="card__article swiper-slide">
+                    <div class="card__image">
+                        <img loading="lazy" decoding="async" role="status" src="img/achieve/achieve2.webp" alt="image" class="card__img">
+
+                        <div class="card__shadow"></div>
+                    </div>
+     
+                    <div class="card__data">
+                       <!-- <h3 class="card__name">Lotw Fox</h3> -->
+                       <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing.
+                       </p>
+     
+                       <!-- <a href="#" class="card__button">View More</a> -->
+                    </div>
+                 </article>
+     
+                 <article class="card__article swiper-slide">
+                    <div class="card__image">
+                        <img loading="lazy" decoding="async" role="status" src="img/achieve/achieve.webp" alt="image" class="card__img">
+                       <div class="card__shadow"></div>
+                    </div>
+     
+                    <div class="card__data">
+                       <!-- <h3 class="card__name">Sara Mit</h3> -->
+                       <p class="card__description">
+                          Lorem ipsum dolor sit amet consectetur adipisicing.
+                       </p>
+     
+                       <!-- <a href="#" class="card__button">View More</a> -->
+                    </div>
+                 </article>
+     
+                 <article class="card__article swiper-slide">
+                    <div class="card__image">
+                        <img src="img/code.jpg" alt="image" class="card__img">
+                       <div class="card__shadow"></div>
+                    </div>
+     
+                    <div class="card__data">
+                       <!-- <h3 class="card__name">Jenny Wert</h3> -->
+                       <p class="card__description">
+                          Passionate about development and design, 
+                          I carry out projects at the request of users.
+                       </p>
+     
+                       <!-- <a href="#" class="card__button">View More</a> -->
+                    </div>
+                 </article>
+
+                 <!-- <article class="card__article swiper-slide">
+                    <div class="card__image">
+                       <img src="assets/img/avatar-5.png" alt="image" class="card__img">
+                       <div class="card__shadow"></div>
+                    </div>
+     
+                    <div class="card__data">
+                       <h3 class="card__name">Lexa Kin</h3>
+                       <p class="card__description">
+                          Passionate about development and design, 
+                          I carry out projects at the request of users.
+                       </p>
+     
+                       <a href="#" class="card__button">View More</a>
+                    </div>
+                 </article> -->
+              </div>
+           </div>
+
+           <!-- Navigation buttons -->
+           <div class="swiper-button-next">
+              <i class="ri-arrow-right-s-line"></i>
+           </div>
+           
+           <div class="swiper-button-prev">
+              <i  class="ri-arrow-left-s-line" ></i>
+           </div>
+
+           <!-- Pagination -->
+           <div class="swiper-pagination"></div>
+        </div>
+     </section>
 
     <!-- added -->
     <div class="about_area black_bg">
@@ -155,7 +282,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section_title text-center mb-80">
-                        <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s" >Department of Computer Science and Engineering</h3>
+                        <h3 class="wow fadeInRight" style="padding-top: 20px;" data-wow-duration="1s" data-wow-delay=".3s" >Department of Computer Science and Engineering</h3>
                         <!-- <p class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s" >The event regularly attracts a diverse range of attendees from around the world, across different professions, and with different.</p> -->
                     </div>
                 </div>
@@ -204,7 +331,7 @@
                                 <div class="thumb wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
                                     <a href="event_detail.html?eventId=1">
                                         <!-- <img src="img/shape/shape_1.svg" alt=""> -->
-                                        <img src="img/event1.jpg" alt="">
+                                        <img src="img/paper.jpg" alt="">
                                        </a>
                                     
                                 </div>
@@ -220,7 +347,7 @@
                                 </div>
                                 <div class="thumb wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
                                     <a href="event_detail.html?eventId=2">
-                                        <img src="img/event2.jpg" alt="">
+                                        <img src="img/quiz.jpg" alt="">
                                     </a>
                                 </div>
                                 <!-- <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".6s">Mr. Zosoldos</h4> -->
@@ -235,10 +362,10 @@
                                 </div>
                                 <div class="thumb  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
                                     <a href="event_detail.html?eventId=3">
-                                        <img src="img/event5.jpg" alt="">
+                                        <img src="img/code.jpg" alt="">
 
                                     </a>
-                                    <!-- <img src="img/event3.jpg" alt=""> -->
+                                    <!-- <img src="img/techvein.jpg" alt=""> -->
                                 </div>
                                 <!-- <h4 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Mr. Zosoldos</h4> -->
                             </div>
@@ -252,7 +379,7 @@
                                 </div>
                                 <div class="thumb wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
                                     <a href="event_detail.html?eventId=4">
-                                        <img src="img/event3.jpg" alt="">
+                                        <img src="img/techvein.jpg" alt="">
 
                                     </a>
                                     
@@ -269,7 +396,7 @@
                                 </div>
                                 <div class="thumb wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
                                     <a href="event_detail.html?eventId=5">
-                                        <img src="img/event4.jpg" alt="">
+                                        <img src="img/figma.jpg" alt="">
 
                                     </a>
                                 </div>
@@ -285,7 +412,7 @@
                                 </div>
                                 <div class="thumb wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
                                     <a href="event_detail.html?eventId=6">
-                                        <img src="img/event6.jpg" alt="">
+                                        <img src="img/blender.jpg" alt="">
 
                                     </a>
                                     
@@ -293,6 +420,41 @@
                                 <!-- <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".6s">Mr. Zosoldos</h4> -->
                             </div>
                         </div>
+                        <div class="single_propram">
+                            <div class="inner_wrap">
+                                <div class="circle_img"></div>
+                                <div class="porgram_top">
+                                    <span class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">PHOTOGRAPHY</span>
+                                    <!-- <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">12 Feb 2020</h4> -->
+                                </div>
+                                <div class="thumb wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+                                    <a href="event_detail.html?eventId=7">
+                                        <img src="img/photo.jpg" alt="">
+
+                                    </a>
+                                </div>
+                                <!-- <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".6s">Mr. Zosoldos</h4> -->
+                            </div>
+                        </div>
+
+                        <div class="single_propram">
+                            <div class="inner_wrap">
+                                <div class="circle_img"></div>
+                                <div class="porgram_top">
+                                    <span class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">POSTER CREATION</span>
+                                    <!-- <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">12 Feb 2020</h4> -->
+                                </div>
+                                <div class="thumb wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
+                                    <a href="event_detail.html?eventId=8">
+                                        <img src="img/poster.jpg" alt="">
+
+                                    </a>
+                                </div>
+                                <!-- <h4 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".6s">Mr. Zosoldos</h4> -->
+                            </div>
+                        </div>
+
+                        
                     </div>
                 </div>
             </div>
@@ -305,8 +467,9 @@
         <div class="form-container" style="display: flex; justify-content: space-between; align-items: center;">
             <div class="form-left">
                 <div class="offer-wrapper">
-                    The Registeration Fees for first 100 members is <span class="strike-ruppee">&#8377;200</span> <span class="strike-ruppee2">   &#8377;150</span>
+                    The registration fee for the first 100 participants is <span class="strike-ruppee">&#8377;200</span> <span class="strike-ruppee2">&#8377;150</span>
                 </div>
+                
                 <h1 class="account-details">
                     <p> <span>Account :</span>
                         162101000011791</p>
@@ -334,19 +497,20 @@
                         <input type="text" name="memberThree" placeholder="Member Three (Optional)" class="input-field" />
                         <input type="email" required name="email"  placeholder="Email" class="input-field" />
                         <input type="number" required name="mobileNumber" placeholder="Mobile Number" class="input-field" />
-    
+                        <p class="form-note" style="font-weight: bolder; ">* You can only choose three technical events</p>
                         <div class="event-checkboxes">
+                            <div class="handleCheckbox">
                             <div class="checkbox-item">
                                 <input type="checkbox" id="colloquium" name="colloquium" />
                                 <label for="colloquium">COLLOQUIUM (2 M/E)</label>
                             </div>
                             <div class="checkbox-item">
                                 <input type="checkbox" id="quaestium" name="quaestium" />
-                                <label for="quaestium">QUAESTIUM (2 M/E)</label>
+                                <label for="quaestium">QUAESTIUM (1 M/E)</label>
                             </div>
                             <div class="checkbox-item">
                                 <input type="checkbox" id="algotium" name="algotium" />
-                                <label for="algotium">ALGOTIUM (2 M/E)</label>
+                                <label for="algotium">ALGOTIUM (1 M/E)</label>
                             </div>
                             <div class="checkbox-item">
                                 <input type="checkbox" id="innovarium" name="innovarium" />
@@ -360,11 +524,21 @@
                                 <input type="checkbox" id="blendarium" name="blendarium" />
                                 <label for="blendarium">BLENDARIUM (1 M/E)</label>
                             </div>
+                            </div>
+                        <p class="form-note" style="font-weight: bolder; ">* Non-Technical events</p>
+                            
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="photography" name="photography" />
+                                <label for="photography">PHOTOGRAPHY (1 M/E)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="postercreation" name="postercreation" />
+                                <label for="postercreation">POSTER CREATION (1 M/E)</label>
+                            </div>
+                            
                         </div>
                         
                         <!-- File Upload -->
-                        
-                        
     
                         <p class="form-note">* M/E - Max team members allowed per event.</p>
     
@@ -372,7 +546,7 @@
                             <div class="file-upload-section">
                                 <label for="payment-screenshot">Payment Screenshot</label>
                                 <input type="file" name="fileToUpload"
-                                id="fileToUpload" class="input-file" />
+                                id="fileToUpload" class="input-file" accept="image/png, image/gif, image/jpeg" />
                             </div>
                         </div>
     
@@ -403,16 +577,16 @@
        
     </div>
     
-    <div class="container">        
+    <div class="">        
     <!-- footer_start  -->
-    <footer id="contact" class="footer">
+    <footer id="contact" class="footer" >
         <div class="footer_top">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-md-8">
                         <div class="footer_widget">
                             <div class="address_details text-center">
-                                <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">16 Oct, 2024</h4>
+                                <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">October 16, 2024</h4>
                                 <!-- <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Green Avenue, New York</h3> -->
                                 <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Contact us : techquest24@mountzion.ac.in</p>
                                 <a href="#form" class="boxed-btn3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Register</a>
@@ -440,6 +614,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> | All
 
     <!-- JS here -->
      <script src="./checkboxHandle.js"></script>
+     <script src="./navbarClose.js"></script>
+     <!-- slider js files -->
+     <script src="./swiper-bundle.min.js"></script>
+
+     <!--=============== MAIN JS ===============-->
+     <script src="./main.js"></script>
     <!-- <script src="./formsubmit.js" ></script>    -->
 
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>

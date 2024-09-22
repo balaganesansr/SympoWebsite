@@ -52,7 +52,7 @@ body {
 }
 
 .event-highlight {
-    color: #f0a500;
+    color: #f66950;
 }
 
 .form-registration {
@@ -79,13 +79,16 @@ body {
     flex-direction: column;
     gap: 10px;
     margin-bottom: 15px;
+    /* align-items: center; */
 }
 
 .checkbox-item {
     display: flex;
+    
     align-items: baseline;
-    gap: 5px;
+    
 }
+
 
 .form-note {
     font-size: 0.9rem;
@@ -276,7 +279,35 @@ body {
     
 }
 .checkbox-item input[type="checkbox"]{
-    accent-color: white;
+    /* accent-color: white;  */
+    display: none;
+}
+.checkbox-item label {
+    cursor: pointer;
+    padding-left: 30px;
+    position: relative;
+    display: inline-block;
+}
+.checkbox-item label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* When checkbox is checked, change the color of the square */
+.checkbox-item input[type="checkbox"]:checked + label::before {
+    /* background-color: green;
+    border-color: green; */
+    /* background: white;
+     */
+     background: #f66950;
 }
 
 @media only screen and (max-width: 768px) {

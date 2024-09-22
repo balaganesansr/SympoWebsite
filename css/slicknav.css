@@ -26,6 +26,15 @@
   float: left;
   
 }
+.slicknav_icon{
+  padding-bottom: 20px !important;
+  /* background: green !important; */
+  margin-bottom: 20px !important;
+
+}
+.slicknav_icon::after{
+  margin-bottom: 20px !important;
+}
 .slicknav_menu .slicknav_icon { 
   /* padding-bottom: 20px; */
   float: left;
@@ -47,7 +56,6 @@
   margin: 0;
 }
 .slicknav_menu .slicknav_icon-bar {
-  
   display: block;
   width: 1.125em;
   height: 0.125em;
@@ -76,7 +84,8 @@
 }
 .slicknav_nav li {
   display: block;
-   background: gray;
+    background: #f66950;
+   /* color: green; */
   
 }
 .slicknav_nav .slicknav_arrow {
@@ -195,6 +204,8 @@
   position: absolute;
   right: 10px;
   width: 96%;
+  /* background: greenyellow; */
+
   /* color: orange; */
   text-align: center;
   color: #f79960;
@@ -229,6 +240,7 @@
   position: relative;
 }
 .slicknav_btn {
+  /* background: green; */
   background-color: transparent;
   cursor: pointer;
   margin-bottom: 10px;
@@ -236,7 +248,7 @@
   position: relative;
   z-index: 99;
 }
-.slicknav_menu .slicknav_open .slicknav_icon-bar:nth-child(2) {
+/* .slicknav_menu .slicknav_open .slicknav_icon-bar:nth-child(2) {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
@@ -251,10 +263,11 @@
         transform: rotate(-45deg) translateY(-6px);
         position: relative;
         top: -1px;
-}
+} */
 .slicknav_menu {
   margin: 0;
   padding: 0;
+  /* background: red; */
 }
 .slicknav_icon-bar {
   background: #fff !important;
@@ -329,6 +342,6 @@
 }
 
 .slicknav_nav a:hover {
-  background-color: #f66950 !important; /* Change background on hover */
+  background-color: black !important; /* Change background on hover */
   color: #fff !important;
 }

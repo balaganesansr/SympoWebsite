@@ -1,9 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Anton|Monoton|Muli:400,400i,500,500i,600&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Anton|Monoton|Muli:400,400i,500,500i,600&display=swap");
 /* line 1, ../../Arafath/CL/December/236. Event-02/HTML/scss/_extend.scss */
-<style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-</style
+
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Jockey+One&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+.event_heading{
+  font-family: "Archivo Black", sans-serif;
+}
+
+.heading_name{
+  font-family: "Jockey One", sans-serif !important; 
+  font-size: 35px !important;
+  font-weight: bolder !important;
+}
+
 .flex-center-start {
   display: -webkit-box;
   display: -ms-flexbox;

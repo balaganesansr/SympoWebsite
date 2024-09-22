@@ -1,55 +1,157 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.success-wrap, .already-wrap {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 400px;
+  width: 90%;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.success-content, .already-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-icon, .already-icon {
+  font-size: 64px;
+}
+
+.success-icon {
+  color: #28a745; /* Green for success */
+}
+
+.already-icon {
+  color: #ffcc00; /* Yellow for already registered */
+}
+
+.success-message, .already-message {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.success-message {
+  color: #28a745; /* Green for success */
+}
+
+.already-message {
+  color: #ffcc00; /* Yellow for already registered */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  body {
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .success-wrap, .already-wrap {
-    text-align: center;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    max-width: 400px;
-    width: 90%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Common styles for both success and error pages */
+.success-wrap, .error-wrap {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 400px;
+  width: 90%;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.success-content, .error-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-icon, .error-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.success-icon {
+  color: #28a745; /* Green for success */
+}
+
+.error-icon {
+  color: #e74c3c; /* Red for error */
+}
+
+.success-message, .error-message {
+  font-size: 24px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.success-message {
+  color: #28a745; /* Green for success message */
+}
+
+.error-message {
+  color: #e74c3c; /* Red for error message */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .success-content, .already-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .success-icon, .already-icon {
-    font-size: 64px;
-    color: #28a745; /* Green for success */
-  }
-  
-  .already-icon {
-    color: #ffcc00; /* Yellow for already registered */
-  }
-  
-  .success-message, .already-message {
-    margin-top: 20px;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .success-message {
-    color: #28a745; /* Green for success */
-  }
-  
-  .already-message {
-    color: #ffcc00; /* Yellow for already registered */
-  }
-  
+}
+.go-back-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.go-back-btn:hover {
+  background-color: #2980b9;
+}

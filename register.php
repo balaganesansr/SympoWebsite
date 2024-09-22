@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $memberTwo = isset($_POST['memberTwo']) ? $_POST['memberTwo'] : null;
         $memberThree = isset($_POST['memberThree']) ? $_POST['memberThree'] : null;
 
-        // Event checkbox values
+        // Event checkbox values (existing)
         $colloquium = isset($_POST['colloquium']) ? $_POST['colloquium'] : null;
         $quaestium = isset($_POST['quaestium']) ? $_POST['quaestium'] : null;
         $algotium = isset($_POST['algotium']) ? $_POST['algotium'] : null;
@@ -24,11 +24,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $designium = isset($_POST['designium']) ? $_POST['designium'] : null;
         $blendarium = isset($_POST['blendarium']) ? $_POST['blendarium'] : null;
 
+        // New event checkbox values
+        $photography = isset($_POST['photography']) ? $_POST['photography'] : null;
+        $postercreation = isset($_POST['postercreation']) ? $_POST['postercreation'] : null;
+
         // Database connection variables
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbName = "techquest24";
+        $servername = "www.mzcet.in";
+        $username = "mzcetin1_techquest22";
+        $password = "Possible@123";
+        $dbName = "mzcetin1_techquest22";
 
         // Create a new MySQLi connection
         $conn = new mysqli($servername, $username, $password, $dbName);
@@ -77,10 +81,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $screenshot_value = null;
             }
 
-            // Prepare SQL queries
+            // Prepare SQL queries (now including new fields)
             $Select = "SELECT email FROM registrations WHERE email = ?";
-            $Insert = "INSERT INTO registrations (teamName, teamLeader, memberTwo, memberThree, email, mobileNumber, collegeName, colloquium, quaestium, algotium, innovarium, designium, blendarium, screenshot, registration_date) 
-                      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())";
+            $Insert = "INSERT INTO registrations (teamName, teamLeader, memberTwo, memberThree, email, mobileNumber, collegeName, colloquium, quaestium, algotium, innovarium, designium, blendarium, photography, postercreation, screenshot, registration_date) 
+                      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())";
 
             $stmt = $conn->prepare($Select);
             $stmt->bind_param("s", $email);
@@ -94,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $stmt->close();
                 $stmt = $conn->prepare($Insert);
                 $stmt->bind_param(
-                    "ssssssssssssss",
+                    "ssssssssssssssss",
                     $teamName,
                     $teamLeader,
                     $memberTwo,
@@ -108,20 +112,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $innovarium,
                     $designium,
                     $blendarium,
+                    $photography,
+                    $postercreation,
                     $screenshot_value
                 );
 
                 if ($stmt->execute()) {
-                    // header('Location: success.html');
-                    header('Location: Successfull.html');
+                    header('Location: success.html');
                     exit();
                 } else {
                     echo "Error: " . $stmt->error;
                 }
             } else {
-                // header('Location: alreadyRegistered.html');
-                header('Location: someone.html');
-
+                header('Location: alreadyRegistered.html');
                 exit();
             }
 
@@ -133,9 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die();
     }
 } else {
-    // header('Location: error.html');
-    header('Location: Error.html');
-
+    header('Location: error.html');
     exit();
 }
 ?>
