@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $ftp_server = "ftp.mzcet.in";
             $ftp_username = "techquest23@mzcet.in";
             $ftp_password = "Volume@3908";
-            $ftp_directory = "/screenshots/";
+            $ftp_directory = "/files_new_ss/";
 
             // Ensure the file input is set and not empty
             if (isset($_FILES['fileToUpload']) && $_FILES['fileToUpload']['error'] == UPLOAD_ERR_OK) {
