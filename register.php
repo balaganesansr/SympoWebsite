@@ -33,6 +33,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $username = "mzcetin1_techquest22";
         $password = "Possible@123";
         $dbName = "mzcetin1_techquest22";
+        // $servername = "localhost";
+        // $username = "root";
+        // $password = "";
+        // $dbName = "techquest24";
 
         // Create a new MySQLi connection
         $conn = new mysqli($servername, $username, $password, $dbName);

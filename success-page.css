@@ -6,7 +6,8 @@
 }
 
 body {
-  background-color: #f4f4f4;
+  background-color: #000;
+  /* background-color: #f4f4f4; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +18,7 @@ body {
   text-align: center;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   padding: 30px;
   max-width: 400px;
   width: 90%;
@@ -32,7 +33,7 @@ body {
 }
 
 .success-icon, .already-icon {
-  font-size: 64px;
+  /* font-size: 64px; */
 }
 
 .success-icon {
@@ -44,7 +45,7 @@ body {
 }
 
 .success-message, .already-message {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   font-size: 24px;
   color: #333;
 }
@@ -88,8 +89,8 @@ body {
   text-align: center;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  /* padding: 30px; */
   max-width: 400px;
   width: 90%;
   animation: fadeIn 0.8s ease-in-out;
@@ -103,8 +104,8 @@ body {
 }
 
 .success-icon, .error-icon {
-  font-size: 64px;
-  margin-bottom: 20px;
+  /* font-size: 64px; */
+  /* margin-bottom: 20px; */
 }
 
 .success-icon {
@@ -118,7 +119,7 @@ body {
 .success-message, .error-message {
   font-size: 24px;
   color: #333;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .success-message {
@@ -154,4 +155,63 @@ body {
 
 .go-back-btn:hover {
   background-color: #2980b9;
+}
+
+
+
+.success-animation { margin:150px auto;}
+
+.checkmark {
+    width: 100px;
+    /* height: 100px; */
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #4bb71b;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #4bb71b;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+    position:relative;
+    top: 5px;
+    right: 5px;
+   margin: 0 auto;
+}
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #4bb71b;
+    fill: #fff;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+ 
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #4bb71b;
+    }
 }
