@@ -116,8 +116,8 @@ body {
 }
 
 .form-submit-btn {
-    background-color: #f0a500;
-    color: #1a1a1a;
+    background-color: #f66950;
+    color: white;
     border: none;
     padding: 12px;
     border-radius: 4px;
@@ -127,7 +127,7 @@ body {
 }
 
 .form-submit-btn:hover {
-    background-color: #d18e00;
+    /* background-color: #d18e00; */
 }
 
 /* Responsive Styles for Mobile */

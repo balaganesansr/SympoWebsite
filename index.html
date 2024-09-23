@@ -48,12 +48,50 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Unlock&display=swap" rel="stylesheet">
     <style>
+
+        *{
+            scrollbar-width: none;
+        }
         .form-text{
             font-family: "Montserrat", sans-serif;
         }  
         .heading_name{
             font-family: "Unlock" , sans-serif;
         }
+        .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.4); /* Black background with opacity */
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 400px;
+        text-align: center;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover, .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
     </style>
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
@@ -186,29 +224,15 @@
                     </div>
      
                     <div class="card__data">
-                       <!-- <h3 class="card__name">Kell Dawx</h3> -->
-                       <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing.
+                       <!-- <h3 class="card__name">Price Distrubition</h3> -->
+                       <p class="card__description">Symposium Highlights with Price Distribution
                        </p>
      
                        <!-- <a href="#" class="card__button">View More</a> -->
                     </div>
                  </article>
      
-                 <article class="card__article swiper-slide">
-                    <div class="card__image">
-                        <img loading="lazy" decoding="async" role="status" src="img/achieve/achieve2.webp" alt="image" class="card__img">
-
-                        <div class="card__shadow"></div>
-                    </div>
-     
-                    <div class="card__data">
-                       <!-- <h3 class="card__name">Lotw Fox</h3> -->
-                       <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing.
-                       </p>
-     
-                       <!-- <a href="#" class="card__button">View More</a> -->
-                    </div>
-                 </article>
+                 
      
                  <article class="card__article swiper-slide">
                     <div class="card__image">
@@ -219,32 +243,33 @@
                     <div class="card__data">
                        <!-- <h3 class="card__name">Sara Mit</h3> -->
                        <p class="card__description">
-                          Lorem ipsum dolor sit amet consectetur adipisicing.
+                          Best department award
                        </p>
      
                        <!-- <a href="#" class="card__button">View More</a> -->
                     </div>
                  </article>
      
+                 
                  <article class="card__article swiper-slide">
                     <div class="card__image">
-                        <img loading="lazy" decoding="async" role="status" src="img/achieve/achieve4.webp" alt="image" class="card__img">
+                        <img loading="lazy" decoding="async" height="" role="status" src="./img/achieve/achieve4.webp" alt="image" class="card__img">
                        <div class="card__shadow"></div>
                     </div>
      
                     <div class="card__data">
                        <!-- <h3 class="card__name">Jenny Wert</h3> -->
                        <p class="card__description">
-                          Passionate about development and design, 
-                          I carry out projects at the request of users.
+                             Lorem ipsum dolor sit amet consectetur adipisicing.
                        </p>
      
                        <!-- <a href="#" class="card__button">View More</a> -->
                     </div>
                  </article>
+
                  <article class="card__article swiper-slide">
                     <div class="card__image">
-                        <img loading="lazy" decoding="async" role="status" src="img/achieve/achieve5.webp" alt="image" class="card__img">
+                        <img loading="lazy" decoding="async" role="status" src="img/achieve/achieve4.webp" alt="image" class="card__img">
                        <div class="card__shadow"></div>
                     </div>
      
@@ -485,6 +510,9 @@
                 <div class="offer-wrapper">
                     The registration fee for the first 100 participants is <span class="strike-ruppee">&#8377;200</span> <span class="strike-ruppee2">&#8377;150</span>
                 </div>
+                <div class="offer-wrapper">
+                    The fee per head is <span class="ruppee">&#8377;150</span>
+                </div>
                 
                 <h1 class="account-details">
                     <p> <span>Account :</span>
@@ -505,14 +533,14 @@
                     <p class="form-header">
                         Register your participation details for <span class="event-highlight">TECHQUEST-24</span>
                     </p>
-                    <form id="registrationForm" action="./register.php" method="POST" enctype="multipart/form-data" class="form-registration">                        
-                        <input type="text" required name="teamName" placeholder="Your Team Name" class="input-full-width" />
-                        <input type="text" required name="collegeName" placeholder="Your College Name" class="input-field" />
-                        <input type="text" required name="teamLeader" placeholder="Team Leader / Member One" class="input-field" />
-                        <input type="text"  name="memberTwo" placeholder="Member Two (Optional)" class="input-field" />
-                        <input type="text" name="memberThree" placeholder="Member Three (Optional)" class="input-field" />
-                        <input type="email" required name="email"  placeholder="Email" class="input-field" />
-                        <input type="number" required name="mobileNumber" placeholder="Mobile Number" class="input-field" />
+                    <form   id="registrationForm" action="./register.php" method="POST" enctype="multipart/form-data" class="form-registration">                        
+                        <input type="text" minlength="3"  required name="teamName" placeholder="Your Team Name" class="input-full-width" />
+                        <input type="text" minlength="10" required name="collegeName" placeholder="Your College Name" class="input-field" />
+                        <input type="text" minlength="3" required name="teamLeader" placeholder="Team Leader / Member One" minlength="3"  class="input-field" />
+                        <input type="text"  name="memberTwo" minlength="3"  placeholder="Member Two (Optional)" class="input-field" />
+                        <input type="text" name="memberThree" minlength="3"  placeholder="Member Three (Optional)" class="input-field" />
+                        <input type="email"  required name="email"  placeholder="Email" class="input-field" />
+                        <input type="number" oninput="this.value=this.value.slice(0,10)"  required name="mobileNumber" placeholder="Mobile Number" class="input-field" />
                         <p class="form-note" style="font-weight: bolder; ">* You can only choose three technical events</p>
                         <div class="event-checkboxes">
                             <div class="handleCheckbox">
@@ -565,14 +593,17 @@
                                 id="fileToUpload" class="input-file" accept="image/png, image/gif, image/jpeg" />
                             </div>
                         </div>
-    
-                        <p class="form-note">* If you want to pay on the spot, you don't need to provide a payment screenshot.</p>
-                        <button type="submit" class="form-submit-btn">REGISTER</button>
+                        <p class="form-note" style="text-align: center;">* If you want to pay on the spot, you don't need to provide a payment screenshot.</p>
+                        <button type="submit" onclick="validate()" class="form-submit-btn">REGISTER</button>
                     </form>
                     <!-- Error message container -->
-                <!-- <div id="errorMessages" style="color: red;"></div> -->
-                <!-- Success message container -->
-                <!-- <div id="successMessage" style="color: green;"></div> -->
+                    <div id="errorModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>Error</h2>
+                            <p id="errorMessage">Validation errors will be displayed here.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -629,6 +660,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> | All
     <!-- footer_end  -->
 
     <!-- JS here -->
+     <script src="./validation.js"></script>
      <script src="./checkboxHandle.js"></script>
      <script src="./navbarClose.js"></script>
      <!-- slider js files -->

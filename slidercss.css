@@ -42,6 +42,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  /* object-fit: cover; */
   height: auto;
 }
 
@@ -93,6 +94,7 @@ img {
   margin: 0 auto;
   position: relative;
   z-index: 5;
+
 }
 
 .card__shadow {
@@ -117,7 +119,7 @@ img {
 .card__description {
   /* color: #f66950; */
   color: black;
-  min-height: 130px;
+  min-height: 90px;
   font-weight: 500;
   margin-bottom: 1.75rem;
 }
@@ -197,6 +199,9 @@ img {
   }
 }
 .card__image img {
+  object-fit: cover;
+  height: 200px;
+
   transition: transform 0.4s ease; 
 }
 

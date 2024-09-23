@@ -20,8 +20,8 @@ body {
   border-radius: 8px;
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   padding: 30px;
-  max-width: 400px;
-  width: 90%;
+  width: 400px;
+  /* width: 90%; */
   animation: fadeIn 0.8s ease-in-out;
 }
 
@@ -33,7 +33,7 @@ body {
 }
 
 .success-icon, .already-icon {
-  /* font-size: 64px; */
+  font-size: 64px;
 }
 
 .success-icon {
@@ -77,13 +77,17 @@ body {
 }
 
 body {
-  background-color: #f4f4f4;
+  /* background-image: url('./img/success-bg.webp'); */
+  background-color: #2d2d2d;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
+.error-wrap{
+  padding: 30px;
+}
 /* Common styles for both success and error pages */
 .success-wrap, .error-wrap {
   text-align: center;
@@ -104,7 +108,7 @@ body {
 }
 
 .success-icon, .error-icon {
-  /* font-size: 64px; */
+  font-size: 64px;
   /* margin-bottom: 20px; */
 }
 
@@ -159,7 +163,7 @@ body {
 
 
 
-.success-animation { margin:150px auto;}
+.success-animation { margin:50px auto}
 
 .checkmark {
     width: 100px;
