@@ -29,7 +29,7 @@
 }
 
 body {
-  font-family: var(--body-font);
+  /* font-family: var(--body-font); */
   font-size: var(--normal-font-size);
   background-color: black;
   color: var(--white-color);
@@ -118,10 +118,11 @@ img {
 
 .card__description {
   /* color: #f66950; */
+  font-size: 16px;
   color: black;
-  min-height: 90px;
+  min-height: 160px;
   font-weight: 500;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.05rem;
 }
 
 .card__button {

@@ -22,8 +22,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <style>
       body {
-        /* background: linear-gradient(135deg, #0e153a 0%, #1c3556 100%);
-             */
         background-image: linear-gradient(
             rgba(0, 0, 0, 0.76),
             rgba(0, 0, 0, 0.9)
@@ -31,10 +29,7 @@
           url("./img/eventbg.jpg");
         background-position: center;
         background-repeat: no-repeat;
-        /* background-blend-mode: ; */
-        /* background: #00070b; */
         color: #f0f0f0;
-        /* font-family: 'Arial', sans-serif; */
         margin: 0;
         padding: 0;
         display: flex;
@@ -45,9 +40,6 @@
       }
 
       .container {
-        /* align-content: first baseline;
-         */
-        /* align-items: start; */
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
@@ -69,36 +61,21 @@
       .container img {
         width: 100%;
         max-width: 600px;
-        /* padding-top: 200px; */
         height: auto;
         border-radius: 15px;
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
         transition: transform 0.3s ease;
       }
 
-      /* .container img:hover {
-            transform: scale(1.05);
-        } */
-
       .details {
         width: 100%;
         max-width: 800px;
-        /* margin-top: 200px; */
         padding-top: 100px;
-        /* padding: 20px; */
         padding-left: 20px;
-
-        /* background: rgba(255, 255, 255, 0.1); */
         border-radius: 15px;
-        /* backdrop-filter: blur(10px); */
-        /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37); */
         margin-top: 20px;
         transition: background-color 0.3s ease;
       }
-
-      /* .details:hover {
-            background: rgba(255, 255, 255, 0.2);
-        } */
 
       .details h1 {
         font-size: 36px;
@@ -129,14 +106,7 @@
 
       .rules {
         margin-bottom: 50px;
-        /* margin-top: 20px; */
       }
-
-      /* .rules p {
-        margin-bottom: 10px;
-        opacity: 0;
-        animation: fadeIn 1s forwards;
-      } */
 
       .go-back {
         display: inline-block;
@@ -147,15 +117,12 @@
         text-decoration: none;
         margin-bottom: 20px;
         font-weight: bold;
-        text-decoration: none;
-        /* margin-top: 20   px; */
         transition: background-color 0.3s, transform 0.3s;
         animation: fadeInUp 1.2s ease-out;
       }
 
       .go-back:hover {
         background-color: #d18c00;
-        /* transform: translateY(-3px); */
       }
 
       @keyframes fadeInUp {
@@ -168,14 +135,13 @@
           transform: translateY(0);
         }
       }
+
       .rules ul {
         color: white;
         list-style-type: circle !important;
-
       }
 
       .rules li {
-        /* color: #333; */
         margin-bottom: 10px;
       }
 
@@ -183,11 +149,6 @@
         .container {
           flex-direction: row;
           justify-content: space-between;
-        }
-
-        .details {
-          /* margin-left: 20px; */
-          margin-top: 0;
         }
 
         .details h1 {
@@ -211,9 +172,13 @@
         <h1 id="eventTitle" class="event_heading"></h1>
         <p id="tagline"></p>
         <div class="rules"></div>
-        <a href="index.html#event" style="text-decoration: none" class="go-back"
+        <div style="display: flex; flex-direction: column;">
+          <img id="qrImage" src="./img/PPT UPLOAD QR.png" alt="QR Code" style="margin-bottom: 20px; max-width: 200px; margin-top: 20px;" />
+        <!-- <div id="paperid"></div> -->
+        <a href="index.html#event" style="text-decoration: none;width: fit-content" class="go-back"
           >Go Back</a
         >
+        </div>
       </div>
     </div>
 
@@ -221,6 +186,7 @@
       const urlParams = new URLSearchParams(window.location.search);
       const eventId = urlParams.get("eventId");
 
+      
       const eventDetails = {
         1: {
           title: "COLLOQUIUM – (Paper Presentation)",
@@ -233,7 +199,7 @@
             "Each presentation will last 5 minutes, followed by a 2-minute Q&A session.",
             "Upload your presentation to the designated portal. Kindly have your PowerPoint presentation saved on a USB drive as a precautionary measure.",
             "Papers will be judged based on originality, relevance, clarity, and impact.",
-          ],
+            "To upload your PPT, please scan the QR code below and use your registered email address for submission."        ],
           coordinator: "Jeberson John J",
           contact: "+91 9025788989",
           venue: "Hall A210",
@@ -352,28 +318,42 @@
         },
       };
 
+
       const eventData = eventDetails[eventId];
 
-      if (eventData) {
-        document.getElementById("eventTitle").textContent = eventData.title;
-        document.getElementById("tagline").textContent = eventData.tagline;
-        const rulesContainer = document.querySelector(".rules");
-        rulesContainer.innerHTML =
-          "<p><strong>Rules:</strong></p><ul>" +
-          eventData.rules.map((rule) => `<li> •  ${rule}</li>`).join("") +
-          "</ul>";
-        document.querySelector(
-          ".details"
-        ).innerHTML += `<p><strong>Student Coordinator:</strong> ${eventData.coordinator}</p>`;
-        // document.querySelector(".details").innerHTML += `<p><strong>Venue:</strong> ${eventData.venue}</p>`;
-        document.querySelector(
-          ".details"
-        ).innerHTML += `<p><strong>Contact No:</strong> ${eventData.contact}</p>`;
-        document.getElementById("eventImage").src = eventData.image;
-      } else {
-        document.querySelector(".details").innerHTML =
-          "<p>Event not found.</p>";
-      }
+if (eventData) {
+    document.getElementById("eventTitle").textContent = eventData.title;
+    document.getElementById("tagline").textContent = eventData.tagline;
+
+    const rulesContainer = document.querySelector(".rules");
+    rulesContainer.innerHTML =
+      "<p><strong>Rules:</strong></p><ul>" +
+      eventData.rules.map((rule) => `<li> •  ${rule}</li>`).join("") +
+      "</ul>";
+
+    document.getElementById("eventImage").src = eventData.image;
+
+    // Conditional rendering of QR code for "COLLOQUIUM – (Paper Presentation)" (Event 1)
+    const qrImage = document.getElementById("qrImage");
+    if (eventId == 1) {
+        qrImage.src = "./img/PPT UPLOAD QR.png"; // Ensure this points to the correct QR code image path
+        qrImage.style.display = "block"; // Show the QR code
+    } else {
+        qrImage.style.display = "none"; // Hide the QR code for other events
+    }
+
+    // Display additional event details (Coordinator and Contact No)
+    document.querySelector(
+      ".details"
+    ).innerHTML += `<p><strong>Student Coordinator:</strong> ${eventData.coordinator}</p>`;
+    document.querySelector(
+      ".details"
+    ).innerHTML += `<p><strong>Contact No:</strong> ${eventData.contact}</p>`;
+} else {
+    document.querySelector(".details").innerHTML =
+      "<p>Event not found.</p>";
+}
+
     </script>
   </body>
 </html>

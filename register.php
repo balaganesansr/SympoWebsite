@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             // FTP file upload
             $ftp_server = "ftp.mzcet.in";
-            $ftp_username = "techquest23@mzcet.in";
+            $ftp_username = "techquest24@mountzion.ac.in";
             $ftp_password = "Volume@3908";
             $ftp_directory = "/files_new_ss/";
 
