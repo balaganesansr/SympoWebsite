@@ -18,7 +18,7 @@
         const collegeNameRegex = /^[a-zA-Z ]+$/;
 
         const teamNameRegex = /^[a-zA-Z][a-zA-Z0-9]{4,}$/;  // Team name must start with string and can be followed by numbers
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+        const emailRegex =/^[A-Za-z0-9\._%+\-]+@[A-Za-z0-9\.\-]+\.[A-Za-z]{2,}$/
         const mobileRegex = /^[0-9]{10}$/;
 
         // Clear existing error messages
@@ -64,7 +64,7 @@
 
         // Email validation
         if (!emailRegex.test(email)) {
-            showError("email", "Email must be a valid Gmail address.");
+            showError("email", "Enter a valid email address.");
             isValid = false;
         }
 
